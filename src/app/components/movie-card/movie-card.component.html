@@ -1,0 +1,14 @@
+<div [routerLink]='["/movies", movie.id]' class="card shadow-2xl max-h-[490px] h-full border border-transparent hover:border-white bg-gradient-to-br from-zinc-700 cursor-pointer">
+    <figure>
+        <img class="object-fill w-full h-[224px]" src="{{ 'https://image.tmdb.org/t/p/w342/' + movie.poster_path}}"  alt="logo">
+    </figure>
+    <!-- <div class="card-body text-lg"> -->
+        <p class="text-md flex-1 py-5 px-3">{{ movie.title}}</p>
+    <!-- </div> -->
+    <div class="card-actions justify-end p-2">
+        <div [routerLink]='["/movies", movie.id]' class="btn btn-ghost text-md font-normal" >
+            See Info
+        </div>
+    </div>
+
+</div>
