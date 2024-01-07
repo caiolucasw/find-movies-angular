@@ -13,7 +13,6 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event'])
   handleScroll(event: Event) {
-    console.log(this.navbar);
     if (window.scrollY === 0) {
       this.navbar.nativeElement.classList.remove('scroll-up');
       this.navbar.nativeElement.classList.remove('scroll-down');

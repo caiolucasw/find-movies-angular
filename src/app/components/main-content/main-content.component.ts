@@ -18,15 +18,15 @@ export class MainContentComponent implements OnInit {
   
   ngOnInit(): void {
     this.movieService.moviesSubject.subscribe((data: Movie[]) => this.movies = data);
-    this.movieService.getMovies().subscribe((data) => console.log(this.movies));
+    this.movieService.getMovies().subscribe((data) => data);
     this.movieService.metadataSubject.subscribe((metadata: MovieMetadata) => this.movieMetadata = metadata);
   }
 
   getMoviesByPage(page: number) {
     if (this.movieString.trim().length <= 0) {
-      this.movieService.getMovies(page).subscribe((data) => console.log(data));
+      this.movieService.getMovies(page).subscribe((data) => data);
     } else {
-      this.movieService.searchMovie(this.movieString, page)?.subscribe((data) => console.log(data));
+      this.movieService.searchMovie(this.movieString, page)?.subscribe((data) => data);
     }
   }
 

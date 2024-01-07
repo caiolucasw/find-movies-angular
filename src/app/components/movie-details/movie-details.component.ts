@@ -18,13 +18,10 @@ export class MovieDetailsComponent implements OnInit {
   ngOnInit(): void {
       this.route.params.subscribe((params: Params) => {
         const id = params['id'] || null;
-        console.log(id);
         if (id) {
           this.id = +id;
-          console.log(this.id);
           this.movieService.findMovieById(+id).subscribe((data) => {
             this.movie = data
-            console.log(data);
           });
         }
       })
