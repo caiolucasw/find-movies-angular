@@ -1,9 +1,11 @@
-<div class="min-h-screen flex flex-col">
+<div class="min-h-screen flex flex-col ">
   <div #navbar class="navbar-container z-10">
     <app-header></app-header>
   </div>
   <main class="flex-1 bg-gradient-to-b from-zinc-950">
-     <router-outlet></router-outlet>
+    <div class="max-w-full xl:container mx-auto">
+      <router-outlet></router-outlet>
+    </div>
   </main>
   <div>
     <app-footer></app-footer>
