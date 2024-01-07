@@ -36,8 +36,10 @@
             <div class="card shadow-xl border border-transparent hover:border-white cursor-pointer bg-gray-50 bg-opacity-5" *ngFor="let company of movie.production_companies">
                 <div class="card-body">
                     <div class="flex justify-center items-center">
-                        <div class="w-[170px] h-[100px] flex items-center justify-center">
-                            <img class="object-contain" src="{{'https://image.tmdb.org/t/p/w154/' + company.logo_path }}" alt="">
+                        <div>
+                            <div class="w-[170px] h-[100px] flex items-center justify-center">
+                                <img class="object-contain max-h-full max-w-full" src="{{'https://image.tmdb.org/t/p/w154/' + company.logo_path }}" alt="">
+                            </div>
                         </div>
                     </div>
                     <p class="text-center"> {{ company?.name || 'Company' }}</p>
