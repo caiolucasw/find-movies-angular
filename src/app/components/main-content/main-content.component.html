@@ -1,9 +1,16 @@
 <div class="w-full h-full px-7 pb-7">
     <div class="flex justify-center my-8">
-        <app-input-search class="w-full"></app-input-search>
+        <app-input-search class="w-full" (inputChange)="onChangeInput($event)"></app-input-search>
     </div>
     <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         <app-movie-card *ngFor="let movie of movies;" [movie]="movie"></app-movie-card>
+    </div>
+    <div class="flex justify-center mt-9">
+        <div class="join">
+            <button class="join-item btn" [disabled]="movieMetadata && movieMetadata.page <= 1" (click)="getMoviesByPage(movieMetadata.page-1)">«</button>
+            <button class="join-item btn">Page {{ movieMetadata ? movieMetadata.page : 1}}</button>
+            <button class="join-item btn" [disabled]="movieMetadata && movieMetadata.page >= movieMetadata.total_pages"  (click)="getMoviesByPage(movieMetadata.page+1)">»</button>
+          </div>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MovieService } from 'src/app/services/movie/movie.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { MovieService } from 'src/app/services/movie/movie.service';
 })
 export class InputSearchComponent {
 
+  @Output() inputChange = new EventEmitter<string>();
+
   constructor(private movieService: MovieService) {}
 
   onPressKey(event: KeyboardEvent) {
@@ -15,6 +17,10 @@ export class InputSearchComponent {
       this.movieService.searchMovie((event.target as HTMLInputElement).value)?.subscribe((data) => data);
     }
 
+  }
+
+  onChange(event: Event) {
+    this.inputChange.emit((event.target as HTMLInputElement).value || '');
   }
 
 }

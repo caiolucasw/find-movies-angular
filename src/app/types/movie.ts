@@ -21,3 +21,10 @@ export interface ResponseMovie {
     total_pages: number;
     total_results: number;
 }
+
+export interface MovieMetadata {
+    page: number;
+    total_pages: number;
+    total_results: number;
+
+}
