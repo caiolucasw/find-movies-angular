@@ -2,8 +2,8 @@
     <div class="flex justify-center my-8">
         <app-input-search class="w-full" (inputChange)="onChangeInput($event)"></app-input-search>
     </div>
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-        <app-movie-card *ngFor="let movie of movies;" [movie]="movie"></app-movie-card>
+    <div class="w-full grid grid-cols-1  justify-items-stretch sm:justify-items-stretch sm:grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+        <app-movie-card class="flex justify-center sm:block"  *ngFor="let movie of movies;" [movie]="movie"></app-movie-card>
     </div>
     <div class="flex justify-center mt-9">
         <div class="join">
