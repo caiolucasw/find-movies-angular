@@ -36,4 +36,4 @@ This project is using the TMDB API.
 
 ## Author:
 
-#### Caio Lucas Silveira de Sousa <br><br> ![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
+#### Caio Lucas Silveira de Sousa <br><br> [![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/caiolsds)
