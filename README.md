@@ -27,8 +27,8 @@ This project is using the TMDB API.
 
 ##  Technologies
  - TypeScript
- - Tailwind
- - Angular
+ - Tailwind CSS
+ - Angular 16
 
 ## Integration
 - TMDB API
